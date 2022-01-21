@@ -1,8 +1,8 @@
 library(tidyverse)
 df <-read_csv("results.csv")
 unique(df$Item)
-df2 <- read_csv("/Users/kirillkonca/Desktop/freq_for_data.csv")
-participants <- read_csv('/Users/kirillkonca/Downloads/резики/31/participants-6.csv')
+df2 <- read_csv('freq_for_data.csv')
+participants <- read_csv('participants.csv')
 participants <- participants[participants$errors_adj < 20, ]
 participants <- c(participants$id)
 df <- merge(df, df2, by.df = "NP")
