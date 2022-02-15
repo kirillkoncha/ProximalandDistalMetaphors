@@ -1,3 +1,4 @@
+setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 library(tidyverse)
 df <-read_csv('results.csv')
 unique(df$Item)
@@ -134,6 +135,9 @@ levels(literal_metaphor$Type)
 literal_metaphor$id <- as.factor(literal_metaphor$id)
 literal_metaphor$Item <- as.factor(literal_metaphor$Item)
 
+library(lme4)
+library(lmerTest)
+
 lime1 <- lmer(log_RT ~ Freq_Type/Type + 
                 (1|id) + (1|Item), 
               data = literal_metaphor, REML = FALSE,
@@ -176,5 +180,4 @@ lime2_correct <- glmer(Correct ~ Freq_Type/Type +
                        data = literal_bleaching, family = binomial,
                        control = glmerControl(optimizer = "bobyqa"))
 summary(lime2_correct)
-
-literal_metaphor[literal_metaphor$Type=='literal_m_v' & literal_metaphor$Correct==0 & literal_metaphor$Freq_Type=='high',]
+s

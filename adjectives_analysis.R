@@ -1,3 +1,4 @@
+setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 library(tidyverse)
 df <-read_csv("results.csv")
 unique(df$Item)
@@ -114,6 +115,9 @@ levels(literal_metaphor$Type)
 
 literal_metaphor$id <- as.factor(literal_metaphor$id)
 literal_metaphor$Item <- as.factor(literal_metaphor$Item)
+
+library(lme4)
+library(lmerTest)
 
 lime1 <- lmer(log_RT ~ Freq_Type/Type + 
        (1|id) + (1|Item), 
