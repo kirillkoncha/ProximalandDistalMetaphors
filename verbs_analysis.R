@@ -179,3 +179,4 @@ lime2_correct <- glmer(Correct ~ Freq_Type/Type +
                        data = literal_bleaching, family = binomial,
                        control = glmerControl(optimizer = "bobyqa"))
 summary(lime2_correct)
+
