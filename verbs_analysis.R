@@ -86,7 +86,8 @@ literal_metaphor <- rbind(low_m, high_m)
 hist(literal_metaphor$RT, breaks= 100)
 
 unique(literal_metaphor$Item)
-#####
+
+####
 literal_bleaching %>%
   filter(Freq_Type == 'high') -> high_literal_bleaching
 
@@ -155,8 +156,6 @@ summary(lime1_correct)
 
 literal_bleaching$Type <- as.factor(literal_bleaching$Type)
 literal_bleaching$Type <- relevel(literal_bleaching$Type, ref = "literal_b_v")
-
-#literal_bleaching$Freq_Type <- ifelse(literal_bleaching$freq>500, 'high', 'low')
 literal_bleaching$Freq_Type <- as.factor(literal_bleaching$Freq_Type)
 
 contrasts(literal_bleaching$Freq_Type) <- contr.sum(2)
@@ -180,4 +179,3 @@ lime2_correct <- glmer(Correct ~ Freq_Type/Type +
                        data = literal_bleaching, family = binomial,
                        control = glmerControl(optimizer = "bobyqa"))
 summary(lime2_correct)
-s
