@@ -3,7 +3,7 @@ library(tidyverse)
 df <-read_csv('results.csv')
 unique(df$Item)
 participants <- read_csv('participants.csv')
-participants <- participants[participants$errors_verbs <= 15, ]
+participants <- participants[participants$errors_verbs <= 20, ]
 participants <- c(participants$id)
 df %>% 
   filter(RT < 20000,
