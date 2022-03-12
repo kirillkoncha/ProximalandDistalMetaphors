@@ -19,6 +19,9 @@ df %>%
 
 filtered <- filtered[ filtered$id %in% participants, ]
 
+# При анализе разбиваем буквальное, метафору и бличинг на высокочастотные и низкочастотные группы. 
+# Для каждой группы убираем все что выходит за +- 2 средних отклонения
+
 literal_metaphor <- filtered[filtered$Type == 'literal_m' | filtered$Type == 'metaphor', ]
 literal_bleaching <- filtered[filtered$Type == 'literal_b' | filtered$Type == 'bleaching', ]
 
