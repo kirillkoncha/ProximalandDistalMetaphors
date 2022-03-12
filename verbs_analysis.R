@@ -14,6 +14,9 @@ df %>%
 
 filtered <- filtered[ filtered$id %in% participants, ]
 library(dplyr)
+
+#У глаголов в Type уже зашифрованы частотности. Пропишем их эксплецитно
+
 filtered %>%
   mutate(Freq_Type = case_when(
     filtered$Type == 'lhm' ~ "high",
@@ -39,6 +42,9 @@ filtered %>%
   )) -> filtered
 
 filtered <- filtered[complete.cases(filtered), ]
+
+# При анализе разбиваем буквальное, метафору и бличинг на высокочастотные и низкочастотные группы. 
+# Для каждой группы убираем все что выходит за +- 2 средних отклонения
 
 literal_metaphor <- filtered[filtered$Type == 'literal_m_v' | filtered$Type == 'metaphor_v', ]
 literal_bleaching <- filtered[filtered$Type == 'literal_b_v' | filtered$Type == 'bleaching_v', ]
