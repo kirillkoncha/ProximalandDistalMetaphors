@@ -9,4 +9,4 @@
 * verbs_analysis.R - анализ глаголов (рекомендуется запускать в RStudio)
 
 # Статья
-Статья доступна по [ссылке](https://www.cogjournal.ru/eng/9/4/KonchaetalRJCS2022.html).
+Статья доступна по [ссылке] (https://www.cogjournal.ru/eng/9/4/KonchaetalRJCS2022.html).
