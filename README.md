@@ -9,8 +9,8 @@ Theories of storing the multiple senses of polysemous words in the mental lexico
 
 * `participants.csv` — anonymized participant data
 * `results.csv` — experiment results (stimuli phrase, reaction time of each participant, etc.)
-* freq_for_data.csv - frequencies for phrases with adjectives (all frequencies above 500 are high-frequency phrases; below 500 are low-frequency), for verbs, information about high/low frequency is encrypted in the Type column (see `results.csv`)
-* `adjectives_analysis.R` - analysis of adjective data (recommended to run in RStudio)
-* `verbs_analysis.R` - analysis of verb data (recommended to run in RStudio)
-* `tables` - tables with stimuli and analysis output
+* `freq_for_data.csv` — frequencies for phrases with adjectives (all frequencies above 500 are high-frequency phrases; below 500 are low-frequency), for verbs, information about high/low frequency is encrypted in the Type column (see `results.csv`)
+* `adjectives_analysis.R` — analysis of adjective data (recommended to run in RStudio)
+* `verbs_analysis.R` — analysis of verb data (recommended to run in RStudio)
+* `tables` — tables with stimuli and analysis output
 
